@@ -2,7 +2,7 @@ version: 0.0
 os: linux
 files:
   - source: /
-    destination: /home/ubuntu/my-python-app  # Adjust to your application's directory
+    destination: /home/ubuntu/python_app  # Adjust to your application's directory
 
 hooks:
   AfterInstall:
