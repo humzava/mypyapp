@@ -1,3 +1,8 @@
 #!/bin/bash
-cd /home/ubuntu/my-python-app  # Change this to your application's directory
-pip install -r requirements.txt  # Install dependencies
+cd /home/ubuntu/python_app  # Change this to your application's directory
+sudo apt install python3-pip -y
+sudo apt install python3-venv
+python3 -m venv venv
+source venv/bin/activate
+pip3 install -r /home/ubuntu/python_app/requirements.txt
+exit
