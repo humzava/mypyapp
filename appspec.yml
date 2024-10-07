@@ -3,9 +3,14 @@ os: linux
 files:
   - source: /
     destination: /home/ubuntu/python_app
-    overwrite: yes  # This ensures files will be overwritten if they exist
+    overwrite: yes  # Ensure new files can overwrite old ones
 
 hooks:
+  BeforeInstall:
+    - location: scripts/cleanup.sh  # Script to remove old files
+      timeout: 300
+      runas: root
+
   AfterInstall:
     - location: scripts/install_dependencies.sh
       timeout: 300
