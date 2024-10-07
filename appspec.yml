@@ -3,11 +3,11 @@ os: linux
 files:
   - source: /
     destination: /home/ubuntu/python_app
-    overwrite: yes  # Ensure new files can overwrite old ones
+    overwrite: yes  # Allow overwriting of files during deployment
 
 hooks:
   BeforeInstall:
-    - location: scripts/cleanup.sh  # Script to remove old files
+    - location: scripts/cleanup.sh  # Cleanup script to remove old files
       timeout: 300
       runas: root
 
