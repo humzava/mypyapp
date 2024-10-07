@@ -2,8 +2,8 @@ version: 0.0
 os: linux
 files:
   - source: /
-    destination: /home/ubuntu/python_app
-    file_exists_behavior: OVERWRITE
+    destination: /home/ubuntu/python_app  # Adjust to your application's directory
+file_exists_behavior: OVERWRITE
 
 hooks:
   BeforeInstall:
@@ -11,7 +11,8 @@ hooks:
       timeout: 300
       runas: root
 
-    - location: scripts/cleanup.sh
+  ApplicationStop:
+    - location: scripts/stop_server.sh
       timeout: 300
       runas: root
 
