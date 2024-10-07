@@ -5,12 +5,6 @@ files:
     destination: /home/ubuntu/python_app
     overwrite: yes  # Allow overwriting of files during deployment
 
-hooks:
-  BeforeInstall:
-    - location: scripts/cleanup.sh  # Cleanup script to remove old files
-      timeout: 300
-      runas: root
-
   AfterInstall:
     - location: scripts/install_dependencies.sh
       timeout: 300
