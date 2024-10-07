@@ -7,11 +7,11 @@ files:
 
 hooks:
   BeforeInstall:
-    - location: scripts/install_dependencies.sh  # Install dependencies before installing the app
+    - location: scripts/install_dependencies.sh
       timeout: 300
       runas: root
 
-    - location: scripts/cleanup.sh  # Cleanup old files
+    - location: scripts/cleanup.sh
       timeout: 300
       runas: root
 
