@@ -1,2 +1,3 @@
 #!/bin/bash
-find /home/ubuntu/python_app -mindepth 1 ! -regex '^/home/ubuntu/python_app/scripts\(/.*\)?' -delete
+# Delete all files in the /home/ubuntu/python_app/scripts directory except cleanup.sh
+find /home/ubuntu/python_app/scripts -mindepth 1 ! -name 'cleanup.sh' -delete
