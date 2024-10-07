@@ -7,4 +7,3 @@ python3 -m venv venv
 source venv/bin/activate
 pip3 install -r /home/ubuntu/python_app/requirements.txt
 exit
-sudo systemctl start python_app.service
